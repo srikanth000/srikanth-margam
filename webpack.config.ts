@@ -32,6 +32,14 @@ const webpackConfig = (): Configuration => ({
         test: /\.s?css$/,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      }
     ],
   },
   devServer: {
@@ -42,7 +50,7 @@ const webpackConfig = (): Configuration => ({
   plugins: [
     new HtmlWebpackPlugin({
       // HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles
-      template: "./public/index.html",
+      template: "public/index.html",
     }),
     // DefinePlugin allows you to create global constants which can be configured at compile time
     new DefinePlugin({
@@ -55,6 +63,7 @@ const webpackConfig = (): Configuration => ({
       },
     }),
   ],
+  devtool: 'inline-source-map',
 });
 
 export default webpackConfig;

@@ -31,7 +31,7 @@
 	"include": [
 		"./src",
 		"webpack.config.ts",
-		"App.tsx",
+		"src/components/App.tsx",
 		"./src/index.tsx"
 	]
 }

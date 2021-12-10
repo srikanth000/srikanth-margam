@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../styles.scss';
+import HomePage from '../pages/HomePage';
+// import Navbar from './Navbar';
 
 /* eslint-disable-next-line */
 const App = () => (
-  <div className="wrapper">
-    <h1>Here I am</h1>
-  </div>
+  <HomePage />
 );
 export default App;
